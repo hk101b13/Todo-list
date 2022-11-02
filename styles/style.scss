@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i {
+  pointer-events: none;
+}
+
+body {
+  min-height: 1080px;
+  background: rgb(12, 205, 163);
+  background: linear-gradient(
+    347deg,
+    rgba(12, 205, 163, 1) 0%,
+    rgba(193, 252, 211, 1) 100%
+  );
+}
+
+header {
+  height: 20vh;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input,
+button {
+  border: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.75rem;
+  margin: 0.2rem;
+  border-radius: 15px;
+}
+
+input[type="number"] {
+  width: 50px;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgb(0, 146, 114);
+  color: white;
+
+  transition: all 0.25s ease-in;
+}
+button:hover {
+  background-color: rgb(0, 61, 38);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div.todo {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0rem;
+    transition: all 0.1s ease-in;
+    p {
+      background-color: white;
+      color: black;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+      padding: 0.5rem 0.75rem;
+      font-size: 1.75rem;
+      margin: 0.2rem;
+      border-radius: 15px;
+    }
+
+    p.todo-text {
+      width: 50%;
+    }
+
+    p.todo-time {
+      width: 20%;
+      text-align: center;
+    }
+
+    button {
+      padding: 1rem;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.75rem;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1000px;
+      img {
+        width: 1.75rem;
+      }
+    }
+    button.complete {
+      background-color: rgb(0, 146, 114);
+    }
+    button.complete:hover {
+      background-color: rgb(0, 61, 38);
+    }
+    button.trash {
+      background-color: rgb(109, 109, 109);
+    }
+    button.trash:hover {
+      background-color: rgb(204, 0, 0);
+    }
+  }
+}
+
+div.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
+
+  button {
+    cursor: pointer;
+    background-color: rgb(0, 146, 114);
+    color: white;
+
+    transition: all 0.25s ease-in;
+  }
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  to {
+    transform: scale(0);
+  }
+}
